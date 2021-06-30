@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS spillWineDB;
+
+CREATE DATABASE spillWineDB;
+
+USE spillWineDB;
