@@ -17,6 +17,6 @@ app.set("view engine", "handlebars");
 
 sequelize.sync().then(()=>{
 app.listen(PORT, function() {
-    console.log(`App running on port  ${PORT}! ...Click on the link:  +"http://localhost:${PORT}/`);
+    console.log(`App running on port  ${PORT}! ...Click on the link:  http://localhost:${PORT}/`);
   });
 })
