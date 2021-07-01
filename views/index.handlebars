@@ -58,3 +58,16 @@
     </div>
   </div>
 </nav>
+
+<!---Where posts will render---->
+<article class="message">
+  {{#each postData}}
+  <div class="message-header">
+    <p>{{title}}</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+   {{body}}
+  </div>
+  {{/each}}
+</article>
