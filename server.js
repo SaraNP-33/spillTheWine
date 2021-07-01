@@ -2,6 +2,7 @@ const express = require("express")
 const expresSession= require("express-session")
 const exphbs =require("express-handlebars")
 const sequelize= require("./config/connection")
+const routes=require('./routes/index')
 
 const app= express();
 const PORT = process.env.PORT || 8080;
@@ -14,6 +15,8 @@ app.use(express.static("public"));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+app.use(routes)
 
 sequelize.sync().then(()=>{
 app.listen(PORT, function() {
