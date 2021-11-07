@@ -2,7 +2,7 @@
 <div class="field">
   <label class="label">Username</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" placeholder="Text input">
+    <input class="input is-success" type="text" id="userRegister" placeholder="Username">
     <span class="icon is-small is-left">
       <i class="fas fa-user"></i>
     </span>
@@ -12,29 +12,33 @@
   </div>
   </div>
 <div class="field">
-  <p class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="Email">
+  <label class="label">Email</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input" type="email"  id="userEmail" placeholder="Email">
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
     <span class="icon is-small is-right">
       <i class="fas fa-check"></i>
     </span>
-  </p>
+  </div>
 </div>
 <div class="field">
-  <p class="control has-icons-left">
-    <input class="input" type="password" placeholder="Password">
+  <label class="label">Password</label>
+  <div class="control has-icons-left">
+    <input class="input" type="password" id="pwRegister" placeholder="Password">
     <span class="icon is-small is-left">
       <i class="fas fa-lock"></i>
     </span>
-  </p>
+  </div>
 </div>
 <div class="field">
   <p class="control">
-    <button class="button is-success">
-      Login
+    <button class="button is-success" id="signup">
+      Sign Up
     </button>
   </p>
 </div>
 </div>
+
+<script src="/assets/js/user.js"></script>
