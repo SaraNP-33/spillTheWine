@@ -14,3 +14,30 @@ newbtn.addEventListener("click", openModal)
 cancel.addEventListener("click", closeModal)
 xModal.addEventListener("click", closeModal)
 
+// fetch for new post
+
+const newPostFormHandler = ()=>{
+    const title= document.querySelector("#newPostTitle").value
+    const content=document.querySelector("#newPostText").value
+    console.log(title, content)
+
+    const response= fetch("/api/post",{
+        method: 'POST',
+        body:JSON.stringify({
+           title: title,
+            content:content
+        }),
+        headers: { 'Content-Type': 'application/json' },
+    })
+    if(response){
+        closeModal()
+        window.location.reload()
+    }else{
+        alert("oops! Something went wrong")
+    }
+
+}
+
+const savebtn= document.querySelector("#savePost")
+
+savebtn.addEventListener("click", newPostFormHandler)
