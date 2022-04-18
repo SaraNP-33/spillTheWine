@@ -2,7 +2,7 @@ const express = require("express")
 const session= require("express-session")
 const exphbs =require("express-handlebars")
 const sequelize= require("./config/connection")
-const routes=require('./routes/index')
+const routes=require('./routes')
 
 const app= express();
 const PORT = process.env.PORT || 8080;

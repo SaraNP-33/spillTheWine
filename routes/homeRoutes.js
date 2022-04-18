@@ -5,11 +5,11 @@ const {Post, User,Comments}= require("../models")
 //route to allow user to see all the posts
 router.get('/', async (req, res)=>{
     try{
-        const posts= Post.findAll({
+        const posts= await Post.findAll({
             include:[User]
         })
 
-        const postData= (await posts).map((post)=>post.get({plain:true}))
+        const postData= posts.map((post)=>post.get({plain:true}))
         // console.log(postData)
         res.render('index', {postData})
     } catch(err){
@@ -20,14 +20,15 @@ router.get('/', async (req, res)=>{
 
 router.get("/login", (req, res)=>{
     if(req.session.loggedIn){
-        res.redirect('/')
+        res.redirect('/dashboard')
     }
     res.render('login')
 })
 router.get("/signup", (req, res)=>{
+    console.log("route is being hit")
     if(req.session.loggedIn){
-        res.redirect('/')
+        res.redirect('/dashboard')
     }
-    res.render('signup')
+    res.render('register')
 })
 module.exports=router;

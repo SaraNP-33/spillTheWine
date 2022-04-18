@@ -1,0 +1,16 @@
+<!---user posts will render---->
+{{#if posts}}
+<article class="message">
+  {{#each posts}}
+  <div class="message-header">
+    <p>{{title}}</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+  by {{user.username}}
+  </div>
+  {{/each}}
+</article>
+{{else}}
+<div>You have no posts yet</div>
+{{/if}}

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   {{!-- FAVICON --}}
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+  {{!-- <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png"> --}}
   {{!-- jQUERY --}}
   <script script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   {{!-- FONT AWESOME 5 --}}
@@ -13,7 +13,7 @@
   {{!-- BULMA  --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
   {{!-- CSS STYLESHEET --}}
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <title>Spill The Wine</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
-      <img src="../assets/images/wine.png" width="112" height="98">
+      <img src="/images/wine.png" width="112" height="98">
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -80,6 +80,6 @@
 </nav>
   
     {{{body}}}
-    <script src="./assets/js/postJs.js"></script>
+    {{!-- <script src="/js/postJs.js"></script> --}}
 </body>
 </html>

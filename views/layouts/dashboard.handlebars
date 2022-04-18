@@ -1,13 +1,62 @@
-<!---user posts will render---->
-<article class="message">
-  {{#each postData}}
-  <div class="message-header">
-    <p>{{title}}</p>
-    <button class="delete" aria-label="delete"></button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{!-- FAVICON --}}
+  {{!-- <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png"> --}}
+  {{!-- jQUERY --}}
+  <script script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  {{!-- FONT AWESOME 5 --}}
+  <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f" crossorigin="anonymous"></script>
+  {{!-- BULMA  --}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  {{!-- CSS STYLESHEET --}}
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Spill The Wine</title>
+</head>
+<body>
+  
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="../assets/images/wine.png" width="112" height="98">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
-  <div class="message-body">
-  by {{user.username}}
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="/" class="navbar-item">
+        Home
+      </a>
+
+      <a href="/dashboard" class="navbar-item">
+        Dashboard
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a href='#' id="logout-link" class="button is-light">
+            Logout
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-  {{/each}}
-</article>
-</div>
+</nav>
+  
+    {{{body}}}
+    <script src="./assets/js/logout.js"></script>
+</body>
+</html>
+
+
