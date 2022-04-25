@@ -5,15 +5,16 @@
    {{#each postData}}
 <article class="message">
   <div class="message-header">
-    <p>{{title}}</p>
-  
+    <p class="has-text-centered">{{title}}</p>
+    <a href="/post/{{id}}">
+   <button class="button is-dark postBtn" value="{{id}}">Read</button>
+  </a>
   </div>
   <div class="message-body">
   by {{user.username}}
+ 
   </div>
-  <a href="/post/{{id}}">
-  <button class="button is-dark postBtn" value="{{id}}">Read</button>
-  </a>
+
 </article>
  {{/each}}
 </div>

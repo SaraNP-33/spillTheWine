@@ -10,8 +10,8 @@ router.get('/', async (req, res)=>{
         })
 
         const postData= posts.map((post)=>post.get({plain:true}))
-        // console.log(postData)
-        res.render('index', {postData})
+        console.log(postData,req.session.userId,"rendering in index")
+        res.render('index', {postData, userId:req.session.userId})
     } catch(err){
         console.log(err)
     }
@@ -30,7 +30,7 @@ router.get('/post/:id', async (req,res)=>{
         if(onePost){
             const post =(await onePost).get({plain:true})
             console.log(post, 'does this work?')
-           return res.render('onePost',{post})
+           return res.render('onePost',{post,  userId:req.session.userId})
         }
         else{
             res.status(404).end();

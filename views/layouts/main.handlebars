@@ -17,8 +17,8 @@
 </head>
 <body>
   
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
+  <nav class="navbar mx-6" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand mt-4">
     
       <img src="/images/wine.png" width="112" height="98">
    
@@ -42,7 +42,9 @@
     </div>
 
     <div class="navbar-end">
+
       <div class="navbar-item">
+        {{#unless userId}}
         <div class="buttons">
           <a href='/signup'class="button is-primary">
             <strong>Sign up</strong>
@@ -51,6 +53,13 @@
             Log in
           </a>
         </div>
+        {{else}}
+          <div class="buttons">
+          <a href='#' id="logout-link" class="button is-light">
+            Logout
+          </a>
+        </div>
+        {{/unless}}
       </div>
     </div>
   </div>
