@@ -1,3 +1,3 @@
-delete posts from dashboard
+delete posts from dashboard -- check
 update the post from dashboard
 create an if/else statement in nav in main.handlebars for log in and logout 
