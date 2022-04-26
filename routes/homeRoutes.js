@@ -25,7 +25,7 @@ router.get('/post/:id', async (req,res)=>{
             req.params.id ,
             {
           
-            include:[User]
+            include:[User, Comments]
         })
         if(onePost){
             const post =(await onePost).get({plain:true})
