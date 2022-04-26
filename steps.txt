@@ -1,3 +1,5 @@
-delete posts from dashboard -- check
-update the post from dashboard
-create an if/else statement in nav in main.handlebars for log in and logout 
+check the reload on modal after creating a post
+check if logout now works outside of dashboard
+put an expiration on session so the user is logged out automatically
+Lots of css! 
+
