@@ -16,12 +16,12 @@ xModal.addEventListener("click", closeModal)
 
 // fetch for new post
 
-const newPostFormHandler = ()=>{
+const newPostFormHandler = async ()=>{
     const title= document.querySelector("#newPostTitle").value
     const content=document.querySelector("#newPostText").value
     console.log(title, content)
 
-    const response= fetch("/api/post",{
+    const response= await fetch("/api/post",{
         method: 'POST',
         body:JSON.stringify({
            title: title,
@@ -29,7 +29,7 @@ const newPostFormHandler = ()=>{
         }),
         headers: { 'Content-Type': 'application/json' },
     })
-    if(response){
+    if(response.ok){
         closeModal()
         window.location.reload()
     }else{
