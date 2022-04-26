@@ -4,7 +4,7 @@
   <div class="column is-6">
   <section class="hero is-primary">
   <div class="hero-body">
-    <p class="title has-text-centered">
+    <p data-id={{post.id}} id="postTitle"class="title has-text-centered">
       {{post.title}}
     </p>
     <p class="subtitle has-text-centered">
@@ -37,8 +37,8 @@
 <div class="box">
   <article class="media">
     <div class="media-content">
-     <textarea class="textarea" placeholder="Leave a Comment" rows="3"></textarea>
-    <button class="button">Button</button>
+     <textarea class="textarea"  id="commentBody" placeholder="Leave a Comment" rows="3"></textarea>
+    <button id="opinionBtn" class="button">Button</button>
     
         {{#if post.comments}}
      {{#each post.comments}}
@@ -55,7 +55,7 @@
 </div>
 </div>
 
-
+<script src="/js/comment.js"></script>
 
 
 
