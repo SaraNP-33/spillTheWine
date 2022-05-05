@@ -5,7 +5,7 @@ body{
 
 /***navbat***/
 .navbar{
-    height:100px;
+    height:13vh;
     background-color: whitesmoke;
 }
 
@@ -24,8 +24,8 @@ body{
     margin-bottom: 5vh;
     color:#600047;
 }
-#log{
-    background-color: #157a6e;
+.log{
+    background-color: #E58E02;
     color:whitesmoke;
 }
 
@@ -35,4 +35,42 @@ body{
 }
 .item{
     color:whitesmoke;
+}
+
+.icons{
+    margin-left: 1vw;
+}
+
+#new
+{
+    margin-left: -5vw;
+    background-color: #002e4f;
+    color:whitesmoke;
+}
+#newPost{
+    margin-left:-8vw;
+}
+#savePost{
+    background-color:#E58E02 ;
+    color:whitesmoke;
+}
+
+.modal-card-head,
+.modal-card-foot{
+    
+    background-color: #002e4f;
+}  
+.modal-card-title{
+    color:whitesmoke;
+}
+.modal-card-body{
+    background-color: whitesmoke;
+}
+.loginForm,
+#signUpForm
+{
+    height:30vh;
+}
+.card-footer-item{
+    color:#E58E02;
 }

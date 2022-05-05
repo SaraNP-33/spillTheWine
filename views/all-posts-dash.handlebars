@@ -1,7 +1,11 @@
 <!---user posts will render---->
 <div class="container">
 <div class="columns">
-  <div class="column is-two-thirds">
+  <div class="column is-1">
+  <p id="newPost"class=" title is-5 has-text-centered">Share your Thoughts</p>
+<button id="new"class="button">New Post</button>
+</div>
+  <div class="column is-9">
 {{#if posts}}
  {{#each posts}}
 <div class="card">
@@ -29,9 +33,7 @@
 <div>You have no posts yet</div>
 {{/if}}
 </div>
-<div class="column">
-<button id="new"class="button">+</button>
-</div>
+
 </div>
 </div>
 
@@ -39,7 +41,7 @@
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <p class="modal-card-title">New Post</p>
+      <p class="modal-card-title has-text-centered">New Post</p>
       <button id="closeModal" class="delete" aria-label="close"></button>
     </header>
     <section class="modal-card-body">
