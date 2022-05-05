@@ -21,4 +21,9 @@ body{
     position: relative;
     margin-left: 65vw;
     margin-bottom: 5vh;
+    color:#600047;
+}
+#log{
+    background-color: #157a6e;
+    color:whitesmoke;
 }
