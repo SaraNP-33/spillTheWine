@@ -1,9 +1,9 @@
 const express=require('express')
 const router= express.Router()
-const {Post, User,Comments}= require("../models")
+const {Post, User,Comments}= require("../models");
 const withAuth= require("../utils/auth")
-//couldn't get this working, there is an error in the console about an callback function.
-//need to start there. 
+
+
 router.get("/", withAuth, async (req,res) => {
     try {
         const postData = await Post.findAll({
@@ -14,7 +14,7 @@ router.get("/", withAuth, async (req,res) => {
         });
     
         const posts = postData.map(post => post.get({ plain: true }));
-        console.log(posts)
+      
     
         res.render('all-posts-dash', {
           layout:'dashboard', 
@@ -23,6 +23,7 @@ router.get("/", withAuth, async (req,res) => {
       } catch (err) {
         res.redirect('login');
       }
+     
 });
 
 // get one post
@@ -38,7 +39,7 @@ router.get('/post/:id',withAuth, async (req,res)=>{
       })
       if(onePost){
           const post =(await onePost).get({plain:true})
-          console.log(post, 'does this work?')
+          // console.log(post, 'does this work?')
          return res.render('onePostDash',{layout:'dashboard', post})
       }
       else{
@@ -48,6 +49,21 @@ router.get('/post/:id',withAuth, async (req,res)=>{
   }catch(err){
       console.log(err)
   }
+})
+router.get("/user", withAuth, async(req, res)=>{
+  try{
+  const user= await User.findByPk({
+    where:{
+      userId:req.session.userId
+    }
+  })
+  const username= user.get({plain:true})
+  console.log(username, "am I getting anything?");
+  res.json(username)
+  
+} catch(err){
+  console.log(err)
+}
 })
 
 module.exports= router;
