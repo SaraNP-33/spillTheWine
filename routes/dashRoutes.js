@@ -50,20 +50,6 @@ router.get('/post/:id',withAuth, async (req,res)=>{
       console.log(err)
   }
 })
-router.get("/user", withAuth, async(req, res)=>{
-  try{
-  const user= await User.findByPk({
-    where:{
-      userId:req.session.userId
-    }
-  })
-  const username= user.get({plain:true})
-  console.log(username, "am I getting anything?");
-  res.json(username)
-  
-} catch(err){
-  console.log(err)
-}
-})
+
 
 module.exports= router;
