@@ -2,7 +2,7 @@ const express= require('express')
 const router = express.Router()
 const {Post, User,Comments}= require("../../models")
 const withAuth = require("../../utils/auth")
-
+  //emdpoit /api/post
     router.post("/", withAuth, async (req,res)=>{
       try{
           console.log(req.body);

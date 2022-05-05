@@ -1,9 +1,24 @@
+body{
+    background-color: whitesmoke;
+}
+
+
 /***navbat***/
 .navbar{
     height:100px;
+    background-color: whitesmoke;
 }
 
-.message{
-    margin-top: 5vh;
-    padding-bottom:10px;
+#mainHero{
+    background-color:#641220;
+}
+#blogTitle,
+#blogSub{
+    color:whitesmoke;
+}
+
+#readLink{
+    position: relative;
+    margin-left: 65vw;
+    margin-bottom: 5vh;
 }

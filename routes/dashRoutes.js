@@ -26,6 +26,7 @@ router.get("/", withAuth, async (req,res) => {
 });
 
 // get one post
+//endpoit /dashboard/post/:id
 router.get('/post/:id',withAuth, async (req,res)=>{
   console.log(req.params.id, "is this coming through?")
   try{

@@ -3,19 +3,21 @@
 <!---Where posts will render---->
 <div class="container">
    {{#each postData}}
-<article class="message">
-  <div class="message-header">
-    <p class="has-text-centered">{{title}}</p>
-    <a href="/post/{{id}}">
-   <button class="button is-dark postBtn" value="{{id}}">Read</button>
-  </a>
-  </div>
-  <div class="message-body">
-  by {{user.username}}
- 
-  </div>
-
-</article>
+  <div class="box">
+ <div class="content">
+   <h3 class="title is-3 has-text-centered">{{title}}</h3>
+   <p class="has-text-centered is-italic">{{user.username}}</p>
+   <div class="block has-text-centered">
+     {{body}}
+</div>
+ </div>
+ <div class="content link">
+     <a id="readLink"href="/post/{{id}}">
+           Read More
+          </a>
+ </div>
+</div>
  {{/each}}
 </div>
- <script src="/js/postJs.js"></script>
+  
+

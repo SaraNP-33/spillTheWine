@@ -1,5 +1,0 @@
-check the reload on modal after creating a post
-check if logout now works outside of dashboard
-put an expiration on session so the user is logged out automatically
-Lots of css! 
-
