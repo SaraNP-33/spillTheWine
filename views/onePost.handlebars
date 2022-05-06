@@ -2,7 +2,7 @@
 
   <div class="columns is-centered mt-6">
   <div class="column is-6">
-  <section class="hero is-primary">
+  <section class="hero">
   <div class="hero-body">
     <p data-id={{post.id}} id="postTitle"class="title has-text-centered">
       {{post.title}}
@@ -12,32 +12,19 @@
     </p>
   </div>
 </section>
-<section class="section">
-  <h2 class="subtitle">
-   {{post.body}}
-  </h2>
-  <nav class="level is-mobile ">
-        <div class="level-right">
-          <a class="level-item has-text-centered" aria-label="reply">
-            <span class="icon is-small">
-              <a id="commentIcon" href="#">
-              <i class="fa-solid fa-comments" aria-hidden="true"></i>
-              </a>
-            </span>
-          </a>
-          <a class="level-item" aria-label="like">
-            <span class="icon is-small">
-              <i class="fas fa-heart" aria-hidden="true"></i>
-            </span>
-          </a>
-        </div>
-      </nav>
-</section>
-
+<div class="box">
+  <p> {{post.body}}</p>
+</div>
 </div>
 
 {{!-- where the comments start --}}
 <div class="column is-5">
+  <div class="column comments">
+    <a id="commentIcon" href="#">
+    <i class="fa-solid fa-comments" aria-hidden="true"></i>
+    Leave your Comment
+     </a>
+</div>
 <div id="opinionBox" class="box invisible ">
    <button id="hideBox"class="delete is-medium"></button>
   <article class="media">
@@ -67,6 +54,7 @@
 </div>
 </div>
 
+
 <script src="/js/comment.js"></script>
 
 
@@ -74,12 +62,3 @@
 
 
 
-{{!-- <article class="message">
-  <div class="message-header">
-    <p>{{post.title}}</p>
-    <button class="delete" aria-label="delete"></button>
-  </div>
-  <div class="message-body">
-      {{post.body}}
-  </div> 
-</article> --}}

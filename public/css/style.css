@@ -97,8 +97,17 @@ body{
     opacity: 0;
 }
 #hideBox{
+    background-color: #E58E02;
 position: relative;
 margin-left:36vw;
 margin-bottom: 2vh;
     
+}
+#commentIcon{
+    margin-left: 3vw;
+    color: #002e4f;
+}
+.comments{
+    position: relative;
+    margin-top: 4vh;
 }

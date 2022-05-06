@@ -3,12 +3,15 @@ const opinionBtn =document.querySelector("#opinionBtn")
 const commentIcon= document.querySelector("#commentIcon")
 const opinionBox= document.querySelector("#opinionBox")
 const hideBox = document.querySelector("#hideBox")
+const comments= document.querySelector(".comments")
 
 const toggleCommentSection= ()=>{
   opinionBox.classList.replace("invisible", "visible")
+  comments.classList.add("invisible")
 }
 const hideCommentSection=()=>{
   opinionBox.classList.replace("visible","invisible")
+  comments.classList.replace("invisible", "visible")
 }
 
 const createComment= async (event)=>{
