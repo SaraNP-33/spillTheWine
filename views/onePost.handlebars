@@ -20,7 +20,9 @@
         <div class="level-right">
           <a class="level-item has-text-centered" aria-label="reply">
             <span class="icon is-small">
+              <a id="commentIcon" href="#">
               <i class="fa-solid fa-comments" aria-hidden="true"></i>
+              </a>
             </span>
           </a>
           <a class="level-item" aria-label="like">
@@ -36,16 +38,18 @@
 
 {{!-- where the comments start --}}
 <div class="column is-5">
-<div class="box">
+<div id="opinionBox" class="box invisible ">
+   <button id="hideBox"class="delete is-medium"></button>
   <article class="media">
     <div class="media-content">
       <div class="content is-flex-direction-column">
      <textarea class="textarea"  id="commentBody" placeholder="Leave a Comment" rows="2"></textarea>
-    <button id="opinionBtn" class="button">Comment</button>
+    <button id="opinionBtn" class="button "><strong>Comment</strong></button>
     </div>
+    <hr>
       {{#if post.comments}}
      {{#each post.comments}}
-     <div id="opinionBox"class="box">
+     <div id="theComment"class="box">
        <div class="content">
           <p><strong>{{user.username}}</strong></p>
        </div>

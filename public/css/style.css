@@ -49,7 +49,9 @@ body{
 #newPost{
     margin-left:-8vw;
 }
-#savePost{
+#savePost,
+#opinionBtn
+{
     background-color:#E58E02 ;
     color:whitesmoke;
 }
@@ -70,6 +72,33 @@ body{
 {
     height:30vh;
 }
-.card-footer-item{
+.card-footer-item
+{
     color:#E58E02;
+}
+#opinionBox{
+    background-color: #002e4f;
+    transition: visibility 0s, opacity 0.5s linear;
+   
+}
+#theComment{
+    background-color: whitesmoke;
+}
+#opinionBtn{
+    margin-top: 2vh;
+    margin-bottom:2vh;
+}
+.visible{
+   visibility: visible;
+   opacity: 1;
+}
+.invisible{
+    visibility: hidden;
+    opacity: 0;
+}
+#hideBox{
+position: relative;
+margin-left:36vw;
+margin-bottom: 2vh;
+    
 }
