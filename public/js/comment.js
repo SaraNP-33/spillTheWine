@@ -7,11 +7,11 @@ const comments= document.querySelector(".comments")
 
 const toggleCommentSection= ()=>{
   opinionBox.classList.replace("invisible", "visible")
-  comments.classList.add("invisible")
+  comments.style.display="none"
 }
 const hideCommentSection=()=>{
   opinionBox.classList.replace("visible","invisible")
-  comments.classList.replace("invisible", "visible")
+  comments.style.display="block"
 }
 
 const createComment= async (event)=>{

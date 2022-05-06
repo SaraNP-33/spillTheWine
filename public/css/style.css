@@ -13,7 +13,9 @@ body{
 }
 #blogTitle,
 #blogSub,
-#welcome{
+#welcome,
+#postTitle,
+#postSub{
     color:whitesmoke;
 }
 
@@ -97,7 +99,7 @@ body{
     opacity: 0;
 }
 #hideBox{
-    background-color: #E58E02;
+background-color: #E58E02;
 position: relative;
 margin-left:36vw;
 margin-bottom: 2vh;
@@ -107,7 +109,8 @@ margin-bottom: 2vh;
     margin-left: 3vw;
     color: #002e4f;
 }
-.comments{
-    position: relative;
-    margin-top: 4vh;
+
+
+#singleHero{
+    background-color:#E58E02
 }

@@ -2,17 +2,17 @@
 
   <div class="columns is-centered mt-6">
   <div class="column is-6">
-  <section class="hero">
+  <section id="singleHero"class="hero">
   <div class="hero-body">
     <p data-id={{post.id}} id="postTitle"class="title has-text-centered">
       {{post.title}}
     </p>
-    <p class="subtitle has-text-centered">
+    <p id="postSub"class="subtitle has-text-centered">
        <small>by {{post.user.username}}</small> <small>{{post.createdAt}}</small>
     </p>
   </div>
 </section>
-<div class="box">
+<div class="box mt-4">
   <p> {{post.body}}</p>
 </div>
 </div>
