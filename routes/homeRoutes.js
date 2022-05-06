@@ -25,7 +25,8 @@ router.get('/post/:id', async (req,res)=>{
             req.params.id ,
             {
           
-            include:[User, Comments]
+            include:[{model:User, attributes:{exclude:"password"}},
+                {model:Comments, include:[{model:User, attributes:{exclude:"password"}}]} ]
         })
         if(onePost){
             const post =(await onePost).get({plain:true})

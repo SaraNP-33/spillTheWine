@@ -33,23 +33,31 @@
 </section>
 
 </div>
-<div class="column is-4">
+
+{{!-- where the comments start --}}
+<div class="column is-5">
 <div class="box">
   <article class="media">
     <div class="media-content">
-     <textarea class="textarea"  id="commentBody" placeholder="Leave a Comment" rows="3"></textarea>
-    <button id="opinionBtn" class="button">Button</button>
-    
-        {{#if post.comments}}
+      <div class="content is-flex-direction-column">
+     <textarea class="textarea"  id="commentBody" placeholder="Leave a Comment" rows="2"></textarea>
+    <button id="opinionBtn" class="button">Comment</button>
+    </div>
+      {{#if post.comments}}
      {{#each post.comments}}
+     <div id="opinionBox"class="box">
+       <div class="content">
+          <p><strong>{{user.username}}</strong></p>
+       </div>
       <div class="content">
           <p>
           {{body}}
        </p> 
       </div>
+      </div>
       {{/each}}
       {{/if}}
-    </div>
+      </div>
   </article>
 </div>
 </div>
